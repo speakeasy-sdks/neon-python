@@ -5,6 +5,7 @@ src/neon_api/operation.py
 src/neon_api/preview.py
 src/neon_api/project.py
 src/neon_api/sdk.py
+.gitignore
 pylintrc
 setup.py
 src/neon_api/__init__.py
