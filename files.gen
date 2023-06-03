@@ -1,3 +1,4 @@
+src/neon_api/sdkconfiguration.py
 src/neon_api/api_key.py
 src/neon_api/branch.py
 src/neon_api/endpoint.py
