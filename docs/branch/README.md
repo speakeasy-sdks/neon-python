@@ -44,7 +44,7 @@ from neon_api.models import operations, shared
 
 s = neon_api.NeonAPI(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
@@ -99,7 +99,7 @@ from neon_api.models import operations, shared
 
 s = neon_api.NeonAPI(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
@@ -140,7 +140,7 @@ from neon_api.models import operations, shared
 
 s = neon_api.NeonAPI(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
@@ -183,7 +183,7 @@ from neon_api.models import operations
 
 s = neon_api.NeonAPI(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
@@ -214,7 +214,7 @@ from neon_api.models import operations
 
 s = neon_api.NeonAPI(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
@@ -248,7 +248,7 @@ from neon_api.models import operations
 
 s = neon_api.NeonAPI(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
@@ -285,7 +285,7 @@ from neon_api.models import operations
 
 s = neon_api.NeonAPI(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
@@ -316,7 +316,7 @@ from neon_api.models import operations
 
 s = neon_api.NeonAPI(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
@@ -350,7 +350,7 @@ from neon_api.models import operations
 
 s = neon_api.NeonAPI(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
@@ -384,7 +384,7 @@ from neon_api.models import operations
 
 s = neon_api.NeonAPI(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
@@ -417,7 +417,7 @@ from neon_api.models import operations
 
 s = neon_api.NeonAPI(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
@@ -448,7 +448,7 @@ from neon_api.models import operations
 
 s = neon_api.NeonAPI(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
@@ -480,7 +480,7 @@ from neon_api.models import operations
 
 s = neon_api.NeonAPI(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
@@ -515,7 +515,7 @@ from neon_api.models import operations
 
 s = neon_api.NeonAPI(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
@@ -552,7 +552,7 @@ from neon_api.models import operations
 
 s = neon_api.NeonAPI(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
@@ -584,7 +584,7 @@ from neon_api.models import operations
 
 s = neon_api.NeonAPI(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
@@ -615,7 +615,7 @@ from neon_api.models import operations, shared
 
 s = neon_api.NeonAPI(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
@@ -651,7 +651,7 @@ from neon_api.models import operations, shared
 
 s = neon_api.NeonAPI(
     security=shared.Security(
-        bearer_auth="YOUR_BEARER_TOKEN_HERE",
+        bearer_auth="",
     ),
 )
 
