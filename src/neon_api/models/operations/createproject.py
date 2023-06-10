@@ -17,6 +17,7 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class CreateProject201ApplicationJSON:
     r"""Created a project.
@@ -24,7 +25,6 @@ class CreateProject201ApplicationJSON:
     At least one non-protected role is created with a password.
     Wait until the operations are finished before attempting to connect to a project database.
     """
-    
     branch: shared_branch.Branch = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branch') }})
     connection_uris: list[shared_connectiondetails.ConnectionDetails] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connection_uris') }})
     databases: list[shared_database.Database] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('databases') }})
@@ -34,9 +34,11 @@ class CreateProject201ApplicationJSON:
     roles: list[shared_role.Role] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('roles') }})
     
 
+
+
+
 @dataclasses.dataclass
 class CreateProjectResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     create_project_201_application_json_object: Optional[CreateProject201ApplicationJSON] = dataclasses.field(default=None)
@@ -49,3 +51,4 @@ class CreateProjectResponse:
     r"""General Error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

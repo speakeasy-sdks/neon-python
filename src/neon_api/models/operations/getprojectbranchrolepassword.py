@@ -8,9 +8,9 @@ from ..shared import rolepasswordresponse as shared_rolepasswordresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetProjectBranchRolePasswordRequest:
-    
     branch_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'branch_id', 'style': 'simple', 'explode': False }})
     r"""The branch ID"""
     project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project_id', 'style': 'simple', 'explode': False }})
@@ -19,9 +19,11 @@ class GetProjectBranchRolePasswordRequest:
     r"""The role name"""
     
 
+
+
+
 @dataclasses.dataclass
 class GetProjectBranchRolePasswordResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     general_error: Optional[shared_generalerror.GeneralError] = dataclasses.field(default=None)
@@ -30,3 +32,4 @@ class GetProjectBranchRolePasswordResponse:
     role_password_response: Optional[shared_rolepasswordresponse.RolePasswordResponse] = dataclasses.field(default=None)
     r"""Successfully returned password for the specified role"""
     
+

@@ -8,9 +8,10 @@ from neon_api import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class BranchesResponse:
     r"""Returned a list of branches for the specified project"""
-    
     branches: list[shared_branch.Branch] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branches') }})
     
+

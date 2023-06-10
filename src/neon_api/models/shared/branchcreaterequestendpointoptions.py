@@ -10,9 +10,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class BranchCreateRequestEndpointOptions:
-    
     type: shared_endpointtype.EndpointType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
     r"""The compute endpoint type. Either `read_write` or `read_only`.
     The `read_only` compute endpoint type is not yet supported.
@@ -27,3 +27,4 @@ class BranchCreateRequestEndpointOptions:
     `-1` means never suspend. Maximum value is 1 week in seconds.
     """
     
+

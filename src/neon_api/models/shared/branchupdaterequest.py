@@ -8,15 +8,18 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class BranchUpdateRequestBranch:
-    
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class BranchUpdateRequest:
-    
     branch: BranchUpdateRequestBranch = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branch') }})
     
+

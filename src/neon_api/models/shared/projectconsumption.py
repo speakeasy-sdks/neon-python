@@ -10,9 +10,9 @@ from neon_api import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ProjectConsumption:
-    
     active_time_seconds: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('active_time_seconds') }})
     r"""Seconds. Control plane observed endpoints of this project being active this amount of wall-clock time.
     The value has some lag.
@@ -44,3 +44,4 @@ class ProjectConsumption:
     The value has some lag. The value is reset at the beginning of each billing period.
     """
     
+

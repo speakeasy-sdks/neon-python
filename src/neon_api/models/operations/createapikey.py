@@ -8,9 +8,9 @@ from ..shared import generalerror as shared_generalerror
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class CreateAPIKeyResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     api_key_create_response: Optional[shared_apikeycreateresponse.APIKeyCreateResponse] = dataclasses.field(default=None)
@@ -19,3 +19,4 @@ class CreateAPIKeyResponse:
     r"""General Error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

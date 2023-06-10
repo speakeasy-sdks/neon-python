@@ -11,9 +11,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class Role:
-    
     branch_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branch_id') }})
     r"""The ID of the branch to which the role belongs"""
     created_at: datetime = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('created_at'), 'encoder': utils.datetimeisoformat(False), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso') }})
@@ -27,3 +27,4 @@ class Role:
     protected: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('protected'), 'exclude': lambda f: f is None }})
     r"""Whether or not the role is system-protected"""
     
+

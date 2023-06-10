@@ -16,9 +16,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class Endpoint:
-    
     autoscaling_limit_max_cu: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('autoscaling_limit_max_cu') }})
     autoscaling_limit_min_cu: float = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('autoscaling_limit_min_cu') }})
     branch_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branch_id') }})
@@ -67,3 +67,4 @@ class Endpoint:
     pending_state: Optional[shared_endpointstate.EndpointState] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pending_state'), 'exclude': lambda f: f is None }})
     r"""The state of the compute endpoint"""
     
+

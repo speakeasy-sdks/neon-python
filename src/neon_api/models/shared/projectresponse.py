@@ -8,9 +8,10 @@ from neon_api import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ProjectResponse:
     r"""Deleted the specified project"""
-    
     project: shared_project.Project = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('project') }})
     
+

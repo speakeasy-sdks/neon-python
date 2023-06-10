@@ -9,10 +9,11 @@ from neon_api import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class BranchOperations:
     r"""Deleted the specified branch"""
-    
     branch: shared_branch.Branch = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branch') }})
     operations: list[shared_operation.Operation] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('operations') }})
     
+

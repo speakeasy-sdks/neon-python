@@ -8,18 +8,20 @@ from ..shared import rolesresponse as shared_rolesresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class ListProjectBranchRolesRequest:
-    
     branch_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'branch_id', 'style': 'simple', 'explode': False }})
     r"""The branch ID"""
     project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project_id', 'style': 'simple', 'explode': False }})
     r"""The Neon project ID"""
     
 
+
+
+
 @dataclasses.dataclass
 class ListProjectBranchRolesResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     general_error: Optional[shared_generalerror.GeneralError] = dataclasses.field(default=None)
@@ -28,3 +30,4 @@ class ListProjectBranchRolesResponse:
     roles_response: Optional[shared_rolesresponse.RolesResponse] = dataclasses.field(default=None)
     r"""Returned a list of roles from the specified branch."""
     
+

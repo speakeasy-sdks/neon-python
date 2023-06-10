@@ -11,10 +11,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class APIKeyRevokeResponse:
     r"""Revoked the specified API key"""
-    
     id: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id') }})
     r"""The API key ID"""
     last_used_from_addr: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_used_from_addr') }})
@@ -26,3 +26,4 @@ class APIKeyRevokeResponse:
     last_used_at: Optional[datetime] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('last_used_at'), 'encoder': utils.datetimeisoformat(True), 'decoder': dateutil.parser.isoparse, 'mm_field': fields.DateTime(format='iso'), 'exclude': lambda f: f is None }})
     r"""A timestamp indicating when the API was last used"""
     
+

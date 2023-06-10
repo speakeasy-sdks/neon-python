@@ -1,0 +1,12 @@
+# ListProjectBranchesResponse
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `branches_response`                                                                   | [Optional[shared.BranchesResponse]](../../models/shared/branchesresponse.md)          | :heavy_minus_sign:                                                                    | Returned a list of branches for the specified project                                 |
+| `content_type`                                                                        | *str*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `general_error`                                                                       | [Optional[shared.GeneralError]](../../models/shared/generalerror.md)                  | :heavy_minus_sign:                                                                    | General Error                                                                         |
+| `status_code`                                                                         | *int*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `raw_response`                                                                        | [requests.Response](https://requests.readthedocs.io/en/latest/api/#requests.Response) | :heavy_minus_sign:                                                                    | N/A                                                                                   |

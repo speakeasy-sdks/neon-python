@@ -9,10 +9,11 @@ from neon_api import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class DatabaseOperations:
     r"""Created a database in the specified branch"""
-    
     database: shared_database.Database = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('database') }})
     operations: list[shared_operation.Operation] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('operations') }})
     
+

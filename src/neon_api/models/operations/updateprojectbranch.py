@@ -9,9 +9,9 @@ from ..shared import generalerror as shared_generalerror
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class UpdateProjectBranchRequest:
-    
     branch_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'branch_id', 'style': 'simple', 'explode': False }})
     r"""The branch ID"""
     branch_update_request: shared_branchupdaterequest.BranchUpdateRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
@@ -19,9 +19,11 @@ class UpdateProjectBranchRequest:
     r"""The Neon project ID"""
     
 
+
+
+
 @dataclasses.dataclass
 class UpdateProjectBranchResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     branch_operations: Optional[shared_branchoperations.BranchOperations] = dataclasses.field(default=None)
@@ -30,3 +32,4 @@ class UpdateProjectBranchResponse:
     r"""General Error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

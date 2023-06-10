@@ -7,12 +7,13 @@ from neon_api import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class Pagination:
     r"""Cursor based pagination is used. The user must pass the cursor as is to the backend.
     For more information about cursor based pagination, see
     https://learn.microsoft.com/en-us/ef/core/querying/pagination#keyset-pagination
     """
-    
     cursor: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cursor') }})
     
+

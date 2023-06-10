@@ -1,0 +1,12 @@
+# DeleteProjectBranchDatabaseResponse
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `content_type`                                                                        | *str*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `database_operations`                                                                 | [Optional[shared.DatabaseOperations]](../../models/shared/databaseoperations.md)      | :heavy_minus_sign:                                                                    | Deleted the specified database                                                        |
+| `general_error`                                                                       | [Optional[shared.GeneralError]](../../models/shared/generalerror.md)                  | :heavy_minus_sign:                                                                    | General Error                                                                         |
+| `status_code`                                                                         | *int*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `raw_response`                                                                        | [requests.Response](https://requests.readthedocs.io/en/latest/api/#requests.Response) | :heavy_minus_sign:                                                                    | N/A                                                                                   |

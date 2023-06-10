@@ -11,9 +11,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class EndpointUpdateRequestEndpoint:
-    
     autoscaling_limit_max_cu: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('autoscaling_limit_max_cu'), 'exclude': lambda f: f is None }})
     autoscaling_limit_min_cu: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('autoscaling_limit_min_cu'), 'exclude': lambda f: f is None }})
     branch_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branch_id'), 'exclude': lambda f: f is None }})
@@ -37,9 +37,12 @@ class EndpointUpdateRequestEndpoint:
     """
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class EndpointUpdateRequest:
-    
     endpoint: EndpointUpdateRequestEndpoint = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('endpoint') }})
     
+

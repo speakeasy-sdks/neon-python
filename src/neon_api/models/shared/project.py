@@ -15,9 +15,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class Project:
-    
     active_time_seconds: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('active_time_seconds') }})
     r"""Seconds. Control plane observed endpoints of this project being active this amount of wall-clock time.
     The value has some lag.
@@ -92,3 +92,4 @@ class Project:
     The data storage size in bytes.
     """
     
+

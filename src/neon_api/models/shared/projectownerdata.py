@@ -8,9 +8,9 @@ from neon_api import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ProjectOwnerData:
-    
     branches_limit: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branches_limit') }})
     email: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('email') }})
     subscription_type: shared_billingsubscriptiontype.BillingSubscriptionType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('subscription_type') }})
@@ -18,3 +18,4 @@ class ProjectOwnerData:
     Notice that for users without billing account this will be \"UNKNOWN\" 
     """
     
+

@@ -1,0 +1,12 @@
+# RevokeAPIKeyResponse
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `api_key_revoke_response`                                                             | [Optional[shared.APIKeyRevokeResponse]](../../models/shared/apikeyrevokeresponse.md)  | :heavy_minus_sign:                                                                    | Revoked the specified API key                                                         |
+| `content_type`                                                                        | *str*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `general_error`                                                                       | [Optional[shared.GeneralError]](../../models/shared/generalerror.md)                  | :heavy_minus_sign:                                                                    | General Error                                                                         |
+| `status_code`                                                                         | *int*                                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `raw_response`                                                                        | [requests.Response](https://requests.readthedocs.io/en/latest/api/#requests.Response) | :heavy_minus_sign:                                                                    | N/A                                                                                   |

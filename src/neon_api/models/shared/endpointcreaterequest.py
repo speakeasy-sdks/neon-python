@@ -12,9 +12,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class EndpointCreateRequestEndpoint:
-    
     branch_id: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branch_id') }})
     r"""The ID of the branch the compute endpoint will be associated with"""
     type: shared_endpointtype.EndpointType = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type') }})
@@ -44,9 +44,12 @@ class EndpointCreateRequestEndpoint:
     """
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class EndpointCreateRequest:
-    
     endpoint: EndpointCreateRequestEndpoint = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('endpoint') }})
     
+

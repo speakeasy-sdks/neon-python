@@ -8,18 +8,20 @@ from ..shared import operationresponse as shared_operationresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetProjectOperationRequest:
-    
     operation_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'operation_id', 'style': 'simple', 'explode': False }})
     r"""The operation ID"""
     project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project_id', 'style': 'simple', 'explode': False }})
     r"""The Neon project ID"""
     
 
+
+
+
 @dataclasses.dataclass
 class GetProjectOperationResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     general_error: Optional[shared_generalerror.GeneralError] = dataclasses.field(default=None)
@@ -28,3 +30,4 @@ class GetProjectOperationResponse:
     r"""Returned details for the specified operation"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

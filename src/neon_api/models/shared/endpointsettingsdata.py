@@ -8,10 +8,11 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class EndpointSettingsData:
     r"""A collection of settings for a compute endpoint"""
-    
     pg_settings: Optional[dict[str, str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pg_settings'), 'exclude': lambda f: f is None }})
     r"""A raw representation of PostgreSQL settings"""
     
+

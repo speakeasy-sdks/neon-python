@@ -10,9 +10,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ProjectCreateRequestProjectBranch:
-    
     database_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('database_name'), 'exclude': lambda f: f is None }})
     r"""The database name. If not specified, the default database name will be used."""
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
@@ -21,10 +21,12 @@ class ProjectCreateRequestProjectBranch:
     r"""The role name. If not specified, the default role name will be used."""
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ProjectCreateRequestProject:
-    
     autoscaling_limit_max_cu: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('autoscaling_limit_max_cu'), 'exclude': lambda f: f is None }})
     autoscaling_limit_min_cu: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('autoscaling_limit_min_cu'), 'exclude': lambda f: f is None }})
     branch: Optional[ProjectCreateRequestProjectBranch] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branch'), 'exclude': lambda f: f is None }})
@@ -43,9 +45,12 @@ class ProjectCreateRequestProject:
     r"""Whether or not passwords are stored for roles in the Neon project. Storing passwords facilitates access to Neon features that require authorization."""
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ProjectCreateRequest:
-    
     project: ProjectCreateRequestProject = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('project') }})
     
+

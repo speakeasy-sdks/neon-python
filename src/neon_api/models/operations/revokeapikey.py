@@ -8,16 +8,18 @@ from ..shared import generalerror as shared_generalerror
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class RevokeAPIKeyRequest:
-    
     key_id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'key_id', 'style': 'simple', 'explode': False }})
     r"""The API key ID"""
     
 
+
+
+
 @dataclasses.dataclass
 class RevokeAPIKeyResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     api_key_revoke_response: Optional[shared_apikeyrevokeresponse.APIKeyRevokeResponse] = dataclasses.field(default=None)
@@ -26,3 +28,4 @@ class RevokeAPIKeyResponse:
     r"""General Error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

@@ -1,0 +1,18 @@
+# Operation
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `action`                                                             | [OperationAction](../../models/shared/operationaction.md)            | :heavy_check_mark:                                                   | The action performed by the operation                                |
+| `branch_id`                                                          | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | The branch ID                                                        |
+| `created_at`                                                         | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | A timestamp indicating when the operation was created                |
+| `endpoint_id`                                                        | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | The endpoint ID                                                      |
+| `error`                                                              | *Optional[str]*                                                      | :heavy_minus_sign:                                                   | The error that occured                                               |
+| `failures_count`                                                     | *int*                                                                | :heavy_check_mark:                                                   | The number of times the operation failed                             |
+| `id`                                                                 | *str*                                                                | :heavy_check_mark:                                                   | The operation ID                                                     |
+| `project_id`                                                         | *str*                                                                | :heavy_check_mark:                                                   | The Neon project ID                                                  |
+| `retry_at`                                                           | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_minus_sign:                                                   | A timestamp indicating when the operation was last retried           |
+| `status`                                                             | [OperationStatus](../../models/shared/operationstatus.md)            | :heavy_check_mark:                                                   | The status of the operation                                          |
+| `updated_at`                                                         | [date](https://docs.python.org/3/library/datetime.html#date-objects) | :heavy_check_mark:                                                   | A timestamp indicating when the operation status was last updated    |

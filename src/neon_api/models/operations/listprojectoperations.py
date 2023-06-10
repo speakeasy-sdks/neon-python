@@ -11,9 +11,9 @@ from neon_api import utils
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class ListProjectOperationsRequest:
-    
     project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project_id', 'style': 'simple', 'explode': False }})
     r"""The Neon project ID"""
     cursor: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'cursor', 'style': 'form', 'explode': True }})
@@ -22,11 +22,13 @@ class ListProjectOperationsRequest:
     r"""Specify a value from 1 to 1000 to limit number of operations in the response"""
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ListProjectOperations200ApplicationJSON:
     r"""Returned a list of operations"""
-    
     operations: list[shared_operation.Operation] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('operations') }})
     pagination: Optional[shared_pagination.Pagination] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pagination'), 'exclude': lambda f: f is None }})
     r"""Cursor based pagination is used. The user must pass the cursor as is to the backend.
@@ -35,9 +37,11 @@ class ListProjectOperations200ApplicationJSON:
     """
     
 
+
+
+
 @dataclasses.dataclass
 class ListProjectOperationsResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     general_error: Optional[shared_generalerror.GeneralError] = dataclasses.field(default=None)
@@ -46,3 +50,4 @@ class ListProjectOperationsResponse:
     r"""Returned a list of operations"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

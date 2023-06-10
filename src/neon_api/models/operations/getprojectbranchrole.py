@@ -8,9 +8,9 @@ from ..shared import roleresponse as shared_roleresponse
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetProjectBranchRoleRequest:
-    
     branch_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'branch_id', 'style': 'simple', 'explode': False }})
     r"""The branch ID"""
     project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project_id', 'style': 'simple', 'explode': False }})
@@ -19,9 +19,11 @@ class GetProjectBranchRoleRequest:
     r"""The role name"""
     
 
+
+
+
 @dataclasses.dataclass
 class GetProjectBranchRoleResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     general_error: Optional[shared_generalerror.GeneralError] = dataclasses.field(default=None)
@@ -30,3 +32,4 @@ class GetProjectBranchRoleResponse:
     role_response: Optional[shared_roleresponse.RoleResponse] = dataclasses.field(default=None)
     r"""Successfully returned details for the specified role"""
     
+

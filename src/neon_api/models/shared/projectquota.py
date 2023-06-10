@@ -8,6 +8,7 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ProjectQuota:
     r"""Per-project consumption quota. If quota is exceeded, then all active computes
@@ -23,7 +24,6 @@ class ProjectQuota:
     
     Zero quota value or empty mean 'unlimited'.
     """
-    
     active_time_seconds: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('active_time_seconds'), 'exclude': lambda f: f is None }})
     r"""The total amount of wall-clock time allowed to be spent by project's compute endpoints."""
     compute_time_seconds: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('compute_time_seconds'), 'exclude': lambda f: f is None }})
@@ -35,3 +35,4 @@ class ProjectQuota:
     written_data_bytes: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('written_data_bytes'), 'exclude': lambda f: f is None }})
     r"""Total amount of data written to all project's branches."""
     
+

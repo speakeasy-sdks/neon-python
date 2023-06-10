@@ -15,10 +15,10 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ProjectListItem:
     r"""Essential data about the project. Full data is available at the getProject endpoint."""
-    
     active_time: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('active_time') }})
     r"""Control plane observed endpoints of this project being active this amount of wall-clock time."""
     branch_logical_size_limit: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branch_logical_size_limit') }})
@@ -65,3 +65,4 @@ class ProjectListItem:
     The data storage size in bytes.
     """
     
+

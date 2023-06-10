@@ -8,18 +8,20 @@ from ..shared import generalerror as shared_generalerror
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class GetProjectEndpointRequest:
-    
     endpoint_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'endpoint_id', 'style': 'simple', 'explode': False }})
     r"""The endpoint ID"""
     project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project_id', 'style': 'simple', 'explode': False }})
     r"""The Neon project ID"""
     
 
+
+
+
 @dataclasses.dataclass
 class GetProjectEndpointResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     endpoint_response: Optional[shared_endpointresponse.EndpointResponse] = dataclasses.field(default=None)
@@ -28,3 +30,4 @@ class GetProjectEndpointResponse:
     r"""General Error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

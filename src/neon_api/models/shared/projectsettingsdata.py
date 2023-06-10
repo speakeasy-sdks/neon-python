@@ -9,9 +9,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ProjectSettingsData:
-    
     quota: Optional[shared_projectquota.ProjectQuota] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('quota'), 'exclude': lambda f: f is None }})
     r"""Per-project consumption quota. If quota is exceeded, then all active computes
     will be automatically suspended and it won't be possible to start them neither
@@ -27,3 +27,4 @@ class ProjectSettingsData:
     Zero quota value or empty mean 'unlimited'.
     """
     
+

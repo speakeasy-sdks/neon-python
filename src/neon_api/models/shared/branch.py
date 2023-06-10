@@ -12,9 +12,9 @@ from typing import Optional
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class Branch:
-    
     active_time_seconds: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('active_time_seconds') }})
     compute_time_seconds: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('compute_time_seconds') }})
     cpu_used_sec: int = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('cpu_used_sec') }})
@@ -53,3 +53,4 @@ class Branch:
     pending_state: Optional[shared_branchstate.BranchState] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pending_state'), 'exclude': lambda f: f is None }})
     r"""The branch state"""
     
+

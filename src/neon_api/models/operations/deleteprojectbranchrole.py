@@ -8,9 +8,9 @@ from ..shared import roleoperations as shared_roleoperations
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class DeleteProjectBranchRoleRequest:
-    
     branch_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'branch_id', 'style': 'simple', 'explode': False }})
     r"""The branch ID"""
     project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project_id', 'style': 'simple', 'explode': False }})
@@ -19,9 +19,11 @@ class DeleteProjectBranchRoleRequest:
     r"""The role name"""
     
 
+
+
+
 @dataclasses.dataclass
 class DeleteProjectBranchRoleResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     general_error: Optional[shared_generalerror.GeneralError] = dataclasses.field(default=None)
@@ -30,3 +32,4 @@ class DeleteProjectBranchRoleResponse:
     role_operations: Optional[shared_roleoperations.RoleOperations] = dataclasses.field(default=None)
     r"""Deleted the specified role from the branch"""
     
+

@@ -14,28 +14,32 @@ from neon_api import utils
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class CreateProjectBranchRequest:
-    
     project_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'project_id', 'style': 'simple', 'explode': False }})
     r"""The Neon project ID"""
     branch_create_request: Optional[shared_branchcreaterequest.BranchCreateRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     
 
+
+
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class CreateProjectBranch201ApplicationJSON:
     r"""Created a branch. An endpoint is only created if it was specified in the request."""
-    
     branch: shared_branch.Branch = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('branch') }})
     endpoints: list[shared_endpoint.Endpoint] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('endpoints') }})
     operations: list[shared_operation.Operation] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('operations') }})
     connection_uris: Optional[list[shared_connectiondetails.ConnectionDetails]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connection_uris'), 'exclude': lambda f: f is None }})
     
 
+
+
+
 @dataclasses.dataclass
 class CreateProjectBranchResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     create_project_branch_201_application_json_object: Optional[CreateProjectBranch201ApplicationJSON] = dataclasses.field(default=None)
@@ -44,3 +48,4 @@ class CreateProjectBranchResponse:
     r"""General Error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+

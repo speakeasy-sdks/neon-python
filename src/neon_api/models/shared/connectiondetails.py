@@ -8,12 +8,13 @@ from neon_api import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class ConnectionDetails:
-    
     connection_parameters: shared_connectionparameters.ConnectionParameters = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connection_parameters') }})
     connection_uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('connection_uri') }})
     r"""Connection URI is same as specified in https://www.postgresql.org/docs/current/libpq-connect.html#id-1.7.3.8.3.6
     It is a ready to use string for psql or for DATABASE_URL environment variable.
     """
     
+

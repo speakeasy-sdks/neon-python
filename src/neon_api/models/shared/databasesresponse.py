@@ -8,9 +8,10 @@ from neon_api import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class DatabasesResponse:
     r"""Returned a list of databases of the specified branch"""
-    
     databases: list[shared_database.Database] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('databases') }})
     
+

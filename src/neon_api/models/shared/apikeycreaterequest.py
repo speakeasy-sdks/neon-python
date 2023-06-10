@@ -7,9 +7,10 @@ from neon_api import utils
 
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
+
 @dataclasses.dataclass
 class APIKeyCreateRequest:
-    
     key_name: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('key_name') }})
     r"""A user-specified API key name. This value is required when creating an API key."""
     
+

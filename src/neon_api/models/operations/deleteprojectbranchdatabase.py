@@ -8,9 +8,9 @@ from ..shared import generalerror as shared_generalerror
 from typing import Optional
 
 
+
 @dataclasses.dataclass
 class DeleteProjectBranchDatabaseRequest:
-    
     branch_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'branch_id', 'style': 'simple', 'explode': False }})
     r"""The branch ID"""
     database_name: str = dataclasses.field(metadata={'path_param': { 'field_name': 'database_name', 'style': 'simple', 'explode': False }})
@@ -19,9 +19,11 @@ class DeleteProjectBranchDatabaseRequest:
     r"""The Neon project ID"""
     
 
+
+
+
 @dataclasses.dataclass
 class DeleteProjectBranchDatabaseResponse:
-    
     content_type: str = dataclasses.field()
     status_code: int = dataclasses.field()
     database_operations: Optional[shared_databaseoperations.DatabaseOperations] = dataclasses.field(default=None)
@@ -30,3 +32,4 @@ class DeleteProjectBranchDatabaseResponse:
     r"""General Error"""
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)
     
+
